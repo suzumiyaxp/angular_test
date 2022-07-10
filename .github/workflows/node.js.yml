@@ -33,5 +33,6 @@ jobs:
       with:
         folder: dist # The folder the action should deploy.
         token: ${{secrets.DEPLOY}}
+        branch: main
         repository-name: zzxt0019/zzxt0019.github.io
       
