@@ -27,11 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-    - run: npm run build --if-present
+    - run: npm run build --if-present --prod --base-href ./ 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: dist/ng02 # The folder the action should deploy.
+        folder: dist # The folder the action should deploy.
         token: ${{secrets.DEPLOY}}
         branch: main
         repository-name: zzxt0019/zzxt0019.github.io
